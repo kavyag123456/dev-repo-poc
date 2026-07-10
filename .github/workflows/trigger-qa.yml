@@ -1,10 +1,10 @@
 name: Trigger QA Workflow After PR Merge 
-on: 
-   pull_request:  
-       branches: 
-            - main 
-       types: 
-       - closed           
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
 jobs: 
    trigger-qa-workflow: 
      if: ${{ github.event.pull_request.merged == true }}
